@@ -1,6 +1,7 @@
 # Requisito 1
 def fetch(url):
     """Seu código deve vir aqui"""
+    # iniciando
 
 
 # Requisito 2
