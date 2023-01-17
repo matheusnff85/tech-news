@@ -21,7 +21,7 @@ def fetch(url):
 # Requisito 2
 def scrape_updates(html_content):
     selector = Selector(text=html_content)
-    news_links = selector.css(".entry-title h2 a::attr(href)").getall()
+    news_links = selector.css(".entry-title a::attr(href)").getall()
     return news_links
 
 
