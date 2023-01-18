@@ -17,7 +17,8 @@ def search_by_date(date):
     try:
         news = []
         news_by_date = datetime.fromisoformat(date).strftime("%d/%m/%Y")
-        for new in search_news({"timestamp": {"$eq": news_by_date}}):
+        query = {"timestamp": {"$eq": news_by_date}}
+        for new in search_news(query):
             news.append((new["title"], new["url"]))
         return news
     except ValueError:
